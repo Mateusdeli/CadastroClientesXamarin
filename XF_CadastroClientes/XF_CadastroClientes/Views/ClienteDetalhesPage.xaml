@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="{Binding Nome}"
+             x:Class="XF_CadastroClientes.Views.ClienteDetalhesPage">
+    
+    <ContentPage.Content>
+
+        <Grid Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Image Source="{Binding Foto}" Grid.Row="0" Grid.Column="0" HeightRequest="70" WidthRequest="70" Aspect="Fill"></Image>
+            <StackLayout Grid.Row="0" Grid.Column="1">
+                <Label Text="{Binding Nome}" FontAttributes="Bold"/>
+                <Label Text="{Binding Cidade}" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Grid.ColumnSpan="2">
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="phone.jpg" WidthRequest="20" HeightRequest="20" />
+                    <Label Text="{Binding Telefone}" TextColor="Blue"  VerticalOptions="Center" VerticalTextAlignment="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TelefoneCommand}" NumberOfTapsRequired="1"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="email16.png" WidthRequest="20" HeightRequest="20"/>
+                    <Label Text="{Binding Email}" TextColor="Blue">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding EmailCommand}" NumberOfTapsRequired="1"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="address.png" WidthRequest="20" HeightRequest="20"/>
+                    <Label Text="{Binding Endereco}" TextColor="Blue">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding EnderecoCommand}" NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+            <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White">
+                <Image Source="{Binding Foto}" HeightRequest="420" WidthRequest="80" Aspect="Fill"></Image>
+            </Grid>
+        </Grid>
+
+    </ContentPage.Content>
+    
+</ContentPage>

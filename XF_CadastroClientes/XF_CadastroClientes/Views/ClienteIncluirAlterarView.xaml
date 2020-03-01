@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XF_CadastroClientes.Views.ClienteIncluirAlterarView">
+    
+  <ContentView.Content>
+      
+        <StackLayout Margin="10">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="{Binding FotoEntry}" Aspect="AspectFit" HeightRequest="150" WidthRequest="150" HorizontalOptions="StartAndExpand"/>
+                <StackLayout>
+                    <Button Text="Câmera" Command="{Binding CameraCommand}" ImageSource="camera.png" />
+                    <Button Text="Álbum" Command="{Binding AlbumCommand}" ImageSource="folder32.png" />
+                    <Button Text="Sms" Command="{Binding SmsCommand}" ImageSource="email32.png" />
+                </StackLayout>
+            </StackLayout>
+            <Entry Text="{Binding NomeEntry}" Placeholder="Nome..." Keyboard="Text" />
+            <Entry Text="{Binding EnderecoEntry}" Placeholder="Endereço..." Keyboard="Text" />
+            <Entry Text="{Binding EmailEntry}" Placeholder="Email..." Keyboard="Text" />
+            <StackLayout Orientation="Horizontal">
+                <Entry Text="{Binding CidadeEntry}" HorizontalOptions="StartAndExpand" Placeholder="Informe a Cidade..." Keyboard="Text" />
+                <Entry Text="{Binding EstadoEntry}" Placeholder="Estado..." Keyboard="Text" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Entry Text="{Binding CepEntry}" HorizontalOptions="StartAndExpand" Placeholder="Informe o Cep..." Keyboard="Text" />
+                <Entry Text="{Binding TelefoneEntry}" Placeholder="Informe o Telefone..." Keyboard="Text" />
+            </StackLayout>
+        </StackLayout>
+      
+    </ContentView.Content>
+      
+</ContentView>

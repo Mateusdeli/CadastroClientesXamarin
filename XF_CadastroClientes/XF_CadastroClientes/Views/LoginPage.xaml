@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Login"
+             x:Class="XF_CadastroClientes.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Frame>
+                <Image Source="clientes.jpg" VerticalOptions="Center"/>
+            </Frame>
+            
+            <Label Text="Login" HorizontalOptions="Center" />
+            
+            <Entry Text="{Binding LoginEntry}" Placeholder="Usuário..." />
+            
+            <Entry x:Name="txtSenha" Text="{Binding SenhaEntry}" Placeholder="Senha..." />
+            
+            <Button 
+                Command="{Binding LoginCommand}" 
+                CommandParameter="{Binding Source={x:Reference txtSenha}, Path=Text}" 
+                TextColor="White" 
+                BackgroundColor="Orange" 
+                Text="Login"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

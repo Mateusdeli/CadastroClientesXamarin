@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Lista de Clientes"
+             x:Class="XF_CadastroClientes.Views.ClientesPage">
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <ListView 
+                ItemsSource="{Binding Clientes}"
+                HasUnevenRows="True" 
+                SeparatorVisibility="Default" 
+                SeparatorColor="Blue"
+                ItemTapped="listaClientes_ItemTapped"
+                IsPullToRefreshEnabled="True"
+                RefreshCommand="{Binding RefreshClientesCommand}"
+                IsRefreshing="{Binding RefreshAtivo}"
+                x:Name="listaClientes">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Alterar" Clicked="MenuItemAlterar_Clicked" CommandParameter="{Binding .}" />
+                                <MenuItem Text="Excluir" Clicked="MenuItemExcluir_Clicked" CommandParameter="{Binding .}" />
+                            </ViewCell.ContextActions>
+                            
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding Foto}" 
+                                       Aspect="AspectFit" 
+                                       WidthRequest="120" 
+                                       HeightRequest="120" />
+                                <StackLayout>
+                                    <Label Text="{Binding Nome}" TextColor="Blue" />
+                                    <Label Text="{Binding Endereco}" TextColor="Black" />
+                                    <Label Text="{Binding Telefone}" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+            <StackLayout>
+                <Button 
+                    Command="{Binding IncluirClienteCommand}"
+                    Text="Incluir Novo Cliente" 
+                    BackgroundColor="White" 
+                    BorderColor="Yellow" 
+                    BorderWidth="5" 
+                    ImageSource="add321.jpg" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

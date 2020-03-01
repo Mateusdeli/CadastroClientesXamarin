@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Alteração de dados do cliente"
+             xmlns:viewBase="clr-namespace:XF_CadastroClientes.Views"
+             x:Class="XF_CadastroClientes.Views.AlterarClientePage">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <viewBase:ClienteIncluirAlterarView />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15" Padding="20">
+                <Button Text="Alterar Dados" Command="{Binding AlterarDadosCommand}"/>
+                <Button x:Name="btnMapa" IsEnabled="{Binding ButtonMapAtivo}" Text="Ver Mapa" Command="{Binding VerMapaCommand}" />
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
