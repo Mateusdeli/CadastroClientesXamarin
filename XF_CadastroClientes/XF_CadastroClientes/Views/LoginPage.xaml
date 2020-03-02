@@ -10,21 +10,35 @@
         <StackLayout>
             
             <Frame>
-                <Image Source="clientes.jpg" VerticalOptions="Center"/>
+                <Image Source="clientes.jpg" 
+                       VerticalOptions="Center"/>
             </Frame>
             
-            <Label Text="Login" HorizontalOptions="Center" />
+            <Label Text="Login" 
+                   HorizontalOptions="Center" />
+
+            <Entry x:Name="txtLogin"
+                   Text="{Binding LoginEntry}" 
+                   Placeholder="Usuário..." />
             
-            <Entry Text="{Binding LoginEntry}" Placeholder="Usuário..." />
-            
-            <Entry x:Name="txtSenha" Text="{Binding SenhaEntry}" Placeholder="Senha..." />
-            
-            <Button 
-                Command="{Binding LoginCommand}" 
-                CommandParameter="{Binding Source={x:Reference txtSenha}, Path=Text}" 
-                TextColor="White" 
-                BackgroundColor="Orange" 
-                Text="Login"/>
+            <Entry x:Name="txtSenha" 
+                   IsPassword="True"
+                   Text="{Binding SenhaEntry}" 
+                   Placeholder="Senha..." />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                
+                <Button 
+                    Command="{Binding LoginCommand}" 
+                    CommandParameter="{Binding Source={x:Reference txtLogin}, Path=Text}" 
+                    Text="Login"/> 
+
+                <Button 
+                    Command="{Binding RegistrarCommand}" 
+                    Text="Registrar"/>
+                
+            </StackLayout>
+          
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

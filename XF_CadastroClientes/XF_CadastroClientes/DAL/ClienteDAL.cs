@@ -22,12 +22,11 @@ namespace XF_CadastroClientes.DAL
         public ClienteDAL()
         {
             _connection = _sqliteConnection.GetConnection();
-            CreateTables();
+            CreateTableCliente();
         }
 
-        private async void CreateTables()
+        private async void CreateTableCliente()
         {
-            await _connection.CreateTableAsync<Usuario>();
             await _connection.CreateTableAsync<Cliente>();
         }
         public async Task<IEnumerable<Cliente>> GetClientes()
@@ -54,19 +53,9 @@ namespace XF_CadastroClientes.DAL
             await _connection.DeleteAsync(cliente);
         }
 
-        public async Task<Usuario> GetUsuarioByPredicate(Expression<Func<Usuario, bool>> expression)
-        {
-            return await _connection.Table<Usuario>().Where(expression).FirstOrDefaultAsync();
-        }
-
         public async Task<Cliente> GetClienteByPredicate(Expression<Func<Cliente, bool>> expression)
         {
             return await _connection.Table<Cliente>().Where(expression).FirstOrDefaultAsync();
-        }
-
-        public async void InsertFirst(Usuario usuario)
-        {
-            await _connection.InsertAsync(usuario);
         }
 
     }

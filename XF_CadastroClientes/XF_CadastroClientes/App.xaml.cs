@@ -31,6 +31,8 @@ namespace XF_CadastroClientes
         private void DependecyInjection()
         {
             DependencyService.Register<ClienteDAL>();
+            DependencyService.Register<UsuarioDAL>();
+            DependencyService.Register<UsuarioValidation>();
             DependencyService.Register<ClienteValidation>();
         }
     }

@@ -6,6 +6,24 @@
              mc:Ignorable="d"
              x:Class="XF_CadastroClientes.App">
     <Application.Resources>
+        
+        <ResourceDictionary>
 
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Orange" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+            <Style x:Key="btnIncluirCliente" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Orange" />
+                <Setter Property="BorderWidth" Value="3" />
+                <Setter Property="BorderColor" Value="OrangeRed" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            
+            
+        </ResourceDictionary>
+        
     </Application.Resources>
 </Application>

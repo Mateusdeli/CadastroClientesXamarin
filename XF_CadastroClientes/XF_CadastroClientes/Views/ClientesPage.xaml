@@ -48,11 +48,9 @@
             </ListView>
             <StackLayout>
                 <Button 
+                    Style="{StaticResource btnIncluirCliente}"
                     Command="{Binding IncluirClienteCommand}"
                     Text="Incluir Novo Cliente" 
-                    BackgroundColor="White" 
-                    BorderColor="Yellow" 
-                    BorderWidth="5" 
                     ImageSource="add321.jpg" />
             </StackLayout>
         </StackLayout>
