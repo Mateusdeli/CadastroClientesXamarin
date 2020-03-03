@@ -12,4 +12,4 @@ Xam.Plugins.Notifier" Version="3.0.1" <br />
 Xamarin.Forms" Version="4.3.0.908675" <br />
 Xamarin.Essentials" Version="1.3.1"
 
-![LoginView](https://github.com/Mateusdeli/CadastroClientesXamarin/tree/master/ImagesViews/LoginView.png)
+!["LoginView"](https://github.com/Mateusdeli/CadastroClientesXamarin/tree/master/ImagesViews/LoginView.png)
