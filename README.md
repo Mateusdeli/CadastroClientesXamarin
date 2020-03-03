@@ -1,6 +1,6 @@
 # Cadastro Clientes Xamarin Forms
 
-<h3> Frameworks utilizados: </h3> 
+<h3> Dependências: </h3> 
 
 FluentValidation" Version="8.6.1" <br />
 Refractored.MvvmHelpers" Version="1.3.0" <br />
