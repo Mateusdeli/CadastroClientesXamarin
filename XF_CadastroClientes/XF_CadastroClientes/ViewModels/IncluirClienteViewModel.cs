@@ -173,7 +173,10 @@ namespace XF_CadastroClientes.ViewModels
                     var result = await App.Current.MainPage.DisplayAlert("Cadastrar Cliente", "Deseja cadastrar um novo cliente?", "Sim", "Não");
                     
                     if (result)
+                    {
                         _clienteDAL.Create(_cliente);
+                        await App.Current.MainPage.Navigation.PopAsync();
+                    }
                 }
                 else
                 {

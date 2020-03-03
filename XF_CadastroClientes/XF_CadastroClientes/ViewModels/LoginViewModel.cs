@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using Xamarin.Forms;
-using Plugin.LocalNotifications;
 using XF_CadastroClientes.DAL;
 using MvvmHelpers;
 using XF_CadastroClientes.Views;
