@@ -1,6 +1,6 @@
 # Cadastro Clientes Xamarin Forms
 
-Frameworks utilizados: 
+<h3> Frameworks utilizados: <h3> 
 
 FluentValidation" Version="8.6.1" <br />
 Refractored.MvvmHelpers" Version="1.3.0" <br />
@@ -11,5 +11,21 @@ Xam.Plugins.Messaging" Version="5.2.0" <br />
 Xam.Plugins.Notifier" Version="3.0.1" <br />
 Xamarin.Forms" Version="4.3.0.908675" <br />
 Xamarin.Essentials" Version="1.3.1"
-
-!["LoginView"](https://github.com/Mateusdeli/CadastroClientesXamarin/tree/master/ImagesViews/LoginView.png)
+<hr>
+<h3> Tela Login <h3>
+<img src="https://github.com/Mateusdeli/CadastroClientesXamarin/blob/master/ImagesViews/LoginView.png" width="200" height="400" />
+<hr>
+<h3> Tela Registro <h3>
+<img src="https://github.com/Mateusdeli/CadastroClientesXamarin/blob/master/ImagesViews/RegistrarView.png" width="200" height="400" />
+  <hr>
+<h3> Tela Lista Clientes <h3>
+<img src="https://github.com/Mateusdeli/CadastroClientesXamarin/blob/master/ImagesViews/ListaClientesView.png" width="200" height="400" />
+  <hr>
+<h3> Tela Incluir Cliente <h3>
+<img src="https://github.com/Mateusdeli/CadastroClientesXamarin/blob/master/ImagesViews/IncluirClienteView.png" width="200" height="400" />
+  <hr>
+<h3> Tela Detalhe Cliente <h3>
+<img src="https://github.com/Mateusdeli/CadastroClientesXamarin/blob/master/ImagesViews/DetalhesClienteView.png" width="200" height="400" />
+  <hr>
+<h3> Tela Alteração Cliente <h3>
+<img src="https://github.com/Mateusdeli/CadastroClientesXamarin/blob/master/ImagesViews/AlteracaoClienteView.png" width="200" height="400" />
